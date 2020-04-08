@@ -36,30 +36,30 @@ function draw() {
   let mouseWeightY = 0.04;
 
   //v colors
-  //background(255,250,250);
+  //background(250,245,245);
   background(105,100,100);
   noStroke();
   fill(250,242,200);
-  ellipse(220+(mouseWeightY*(mouseX-100)),157,70,70);
+  ellipse(220+(mouseWeightY*(mouseX-100)),157+(mouseWeightY*(mouseY-100)),70,70);
   noFill();
   strokeWeight(20);
   let xOff = 20;
   let yOff = 20;
   let wavesize = 40;
-  wave(0,250,270,xOff+30+(mouseWeightY*(mouseX-100)),yOff,40);
-  wave(0,230,250,xOff+15+(mouseWeightY*(mouseX-100)),yOff+15,40);
-  wave(0,240,250,xOff+(mouseWeight*(mouseX-100)),yOff+30,40);
+  wave(0,250,270,xOff+30+(mouseWeightY*(mouseX-100)),yOff+(mouseWeightY*(mouseY-100)),40);
+  wave(0,230,250,xOff+15+(mouseWeightY*(mouseX-100)),yOff+15+(mouseWeightY*(mouseY-100)),40);
+  wave(0,240,250,xOff+(mouseWeightY*(mouseX-100)),yOff+30+(mouseWeightY*(mouseY-100)),40);
 
   //v lineart background v
   stroke(105,100,100);
   strokeWeight(4);
   noFill();
-  arc(220,157,70,70, PI+0.14,HALF_PI-0.1);//wave*3
+  arc(220+(mouseWeightY*(mouseX-100)),157+(mouseWeightY*(mouseY-100)),70,70, PI+0.14,HALF_PI-0.1);//wave*3
   //ellipse(220,155,70,70);
-  wave(105,100,100,xOff+38,yOff-9,40);
-  wave(105,100,100,xOff+20,yOff+7,40);
-  wave(105,100,100,xOff+7,yOff+23,40);
-  wave(105,100,100,xOff-10,yOff+38,40);
+  wave(105,100,100,xOff+38+(mouseWeightY*(mouseX-100)),yOff-9+(mouseWeightY*(mouseY-100)),40);
+  wave(105,100,100,xOff+20+(mouseWeightY*(mouseX-100)),yOff+7+(mouseWeightY*(mouseY-100)),40);
+  wave(105,100,100,xOff+7+(mouseWeightY*(mouseX-100)),yOff+23+(mouseWeightY*(mouseY-100)),40);
+  wave(105,100,100,xOff-10+(mouseWeightY*(mouseX-100)),yOff+38+(mouseWeightY*(mouseY-100)),40);
 
 
   //v lineart v
