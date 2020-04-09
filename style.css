@@ -1,4 +1,27 @@
 html, body {
   padding: 0px;
   margin: 0px;
+  background: skyblue;
+  font-family: "monospace", sans-serif;
+  font-size: 1rem;
+  color: #1a0808;
+}
+
+a{
+  font-family: "monospace", sans-serif;
+  font-size: 1rem;
+  color: #1a0808;
+  text-decoration: none;
+
+}
+
+a:visited {
+  color: grey;
+}
+
+div{
+  margin: 10px 40px;
+}
+canvas{
+  margin: 0px 40px;
 }
