@@ -30,6 +30,11 @@ function draw() {
     for (let i = 0; i<100;i++){
         stroke(colours[i]);
         line(20,30+(3*i),20+320,30+(3*i));
+        if (i==70){
+          fill(0);
+          //text(30+(3*i),40,40);
+          fill(100,130,122);
+        }
     }
     //draw eclipses
     noStroke();
@@ -39,8 +44,8 @@ function draw() {
     //draw foregrownd lines
     if (above.length<0){
         for (let i = 0; i<above.length;i++){
-            stroke(colours[(above[i]-30)/3]);
-            line(20,above[i],20+320,above[i]);
+            stroke(colours[above[i]]);
+            line(20,30+(3*above[i]),20+320,30+(3*above[i]));
         }
     }
 
@@ -56,14 +61,21 @@ function draw() {
     strokeWeight(4);
     noFill();
     rect(20,20,320,320);
+    strokeWeight(2);
+    textSize(25);
+    text("TO BE CONTINUED...",30,300);
 }
 //if key pressed, increase linenumber.
 function mousePressed() {
     if(mouseY>280&& mouseY<320){
+      fill(0);
+      text(30+(3*i),40,40);
+      fill(100,130,122);
         if(mouseX>130 && mouseX<200){
-            above.push(mouseY);
+            above.push((mouseY-30)/3);
+
         } else {
-            above.pop(mouseY);
+            above.pop((mouseY-30)/3);
         }
     }
 }

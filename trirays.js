@@ -8,21 +8,19 @@ function setup() {
 
 function draw() {
     strokeWeight(1);
+    stroke(0,0,0,80);
     background(200,230,222);
     fill(100,130,122);
     //offset of coorinates
     let unitDistance = (sideLength/lineCount);
     let xOffset = unitDistance*0.5;
     let yOffset = xOffset*Math.sqrt(3);
-    text(unitDistance,40,40);
-    text(xOffset,40,80);
-    text(yOffset,40,120);
     //3 arrays of coordinates, one for each side.
     //draw the lines from line coordinates to x
     for (let i = 0; i < lineCount; i++) {
-        line(20+(unitDistance*i),40,mouseX,mouseY); //top
-        line(20+(xOffset*i),40+(yOffset*i),mouseX,mouseY); //left
-        line(20+sideLength-(xOffset*i),40+(yOffset*i),mouseX,mouseY); //right
+        line(40+(unitDistance*i),60,mouseX,mouseY); //top
+        line(40+(xOffset*i),60+(yOffset*i),mouseX,mouseY); //left
+        line(40+sideLength-(xOffset*i),60+(yOffset*i),mouseX,mouseY); //right
     }
     //draw the frame around
     //Final frame
@@ -32,7 +30,7 @@ function draw() {
     rect(0,0,400,20);
     rect(0,340,450,100);
     rect(340,0,50,4500);
-    stroke(0,0,0);
+    stroke(0,0,0,80);
     strokeWeight(4);
     noFill();
     rect(20,20,320,320);
